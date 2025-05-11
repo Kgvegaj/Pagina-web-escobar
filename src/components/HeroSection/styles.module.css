@@ -1,0 +1,131 @@
+.hero {
+    position: relative;
+    background:
+        linear-gradient(135deg, var(--color-principal), var(--color-secundario)),
+        url('../../../public/images/fondo-auditoria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: var(--color-texto-claro);
+    padding: 6rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.heroTitle {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    animation: fadeIn 1s ease-out 0.7s both;
+}
+
+.primaryButton {
+    background-color: var(--color-acento);
+    color: var(--color-oscuro);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transicion-base);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primaryButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background-color: #ffea00;
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: var(--color-texto-claro);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 2px solid var(--color-acento);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transicion-base);
+}
+
+.secondaryButton:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #ffea00;
+    transform: translateY(-3px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.2rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+        max-width: 250px;
+    }
+}

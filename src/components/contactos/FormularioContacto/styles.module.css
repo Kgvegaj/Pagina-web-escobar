@@ -1,0 +1,91 @@
+/* FORMULARIO CONTACTO */
+.formularioSection {
+    padding: 5rem 1rem;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+    text-align: center;
+    color: #4a184d;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #4a184d;
+}
+
+.formGroup textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submitButton {
+    background: linear-gradient(135deg, #4a184d, #7b2cbf);
+    color: #ffd700;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+    
+    .form {
+        padding: 0 1rem;
+    }
+}

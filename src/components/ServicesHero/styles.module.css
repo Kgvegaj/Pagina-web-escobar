@@ -1,0 +1,76 @@
+.servicesHero {
+    background: linear-gradient(135deg, #4a184d 0%, #7b2cbf 100%);
+    color: white;
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.heroTitle {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.heroSubtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0;
+    transition: opacity 1s ease 2s; /* Aparece después del título */
+}
+
+/* Animación de typewriter con CSS puro */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid #ffd700;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 0;
+    animation: 
+        typing 2s steps(40, end) forwards,
+        blink-caret 0.75s step-end infinite;
+}
+
+/* Animación cuando se agrega la clase animate */
+.animate .heroSubtitle {
+    opacity: 1;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffd700; }
+}
+
+@media (max-width: 768px) {
+    .servicesHero {
+        padding: 4rem 0;
+        min-height: 300px;
+    }
+    
+    .heroTitle {
+        font-size: 2rem;
+        white-space: normal;
+    }
+    
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+    
+    .typewriter {
+        border-right: none;
+        animation: none;
+        width: auto;
+    }
+}

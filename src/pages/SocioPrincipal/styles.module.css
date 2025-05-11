@@ -1,0 +1,88 @@
+.socioPrincipal {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.foto {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.02);
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    flex: 1;
+    color: #666;
+}
+
+.info h3 {
+    color: #4a184d;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.info h3::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #ffd700;
+    margin-top: 0.5rem;
+}
+
+.cargo {
+    color: #888;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.detalles p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info h3::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .foto {
+        max-width: 500px;
+    }
+}

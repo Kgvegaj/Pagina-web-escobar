@@ -1,0 +1,41 @@
+.institucionesAfiliadas {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.sectionTitle {
+    text-align: center;
+    color: #4a184d;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.gridInstituciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #4a184d;
+}
+
+.item i {
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+}

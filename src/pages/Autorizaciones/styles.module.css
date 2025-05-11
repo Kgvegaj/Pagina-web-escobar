@@ -1,0 +1,180 @@
+.autorizaciones {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Estilos del título */
+.titleContainer {
+    position: relative;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.titleBackground {
+    background: linear-gradient(45deg, #4a184d 30%, #2d0e30 100%);
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.titleBackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 215, 0, 0.1),
+        rgba(255, 215, 0, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    animation: slide 20s linear infinite;
+}
+
+.sectionTitle {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0 1rem;
+}
+
+.titleIcon {
+    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.titleUnderline {
+    width: 200px;
+    height: 4px;
+    background: #ffd700;
+    margin: -1rem auto 0;
+    border-radius: 2px;
+    transform: rotate(-2deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de autorizaciones */
+.listaAutorizaciones {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: #4a184d;
+    border-color: #ffd700;
+}
+
+.item:hover .icon {
+    color: #ffd700;
+    transform: scale(1.2) rotate(15deg);
+}
+
+.item:hover .texto h3 {
+    color: #ffd700;
+}
+
+.item:hover .texto p {
+    color: #eee;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #ffd700;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.texto h3 {
+    color: #4a184d;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.texto h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.item:hover .texto h3::after {
+    width: 100%;
+}
+
+.texto p {
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+    .item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .texto h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .titleUnderline {
+        width: 150px;
+    }
+}

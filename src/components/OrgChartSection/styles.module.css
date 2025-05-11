@@ -1,0 +1,103 @@
+/* OrgChart Section */
+.orgChartSection {
+    padding: 4rem 1rem;
+    background-color: #333;
+    color: #ecf0f1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.orgChart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.level2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.position {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    padding: 1.2rem 1.8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 200px;
+}
+
+.position:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.position.principal {
+    background-color: #ffd700;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1.5rem 2.5rem;
+}
+
+.position i {
+    font-size: 1.2rem;
+}
+
+/* Líneas de conexión */
+.level1::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .orgChartSection {
+        padding: 3rem 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .level2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .position {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,258 @@
+.quienesSomos {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos del título */
+.titleContainer {
+    position: relative;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.titleBackground {
+    background: linear-gradient(45deg, #4a184d 30%, #2d0e30 100%);
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.titleBackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 215, 0, 0.1),
+        rgba(255, 215, 0, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    animation: slide 20s linear infinite;
+}
+
+.sectionTitle {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0 1rem;
+}
+
+.titleIcon {
+    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.titleUnderline {
+    width: 200px;
+    height: 4px;
+    background: #ffd700;
+    margin: -1rem auto 0;
+    border-radius: 2px;
+    transform: rotate(-2deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Descripción */
+.descripcionBox {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    margin: 2rem auto;
+    max-width: 800px;
+    border: 2px solid transparent;
+}
+
+.descripcionBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-color: #ffd700;
+}
+
+.descripcionText {
+    font-size: 1.1rem;
+    color: #4a184d;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0;
+}
+
+.keyword {
+    color: #4a184d;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+
+.keyword::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.keyword:hover::after {
+    width: 100%;
+}
+
+/* Info adicional */
+.infoCard {
+    background: linear-gradient(135deg, #4a184d, #6a2c6e);
+    border-radius: 15px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin: 3rem auto;
+    max-width: 800px;
+    color: white;
+}
+
+.infoCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.infoIcon {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.infoCard:hover .infoIcon {
+    transform: scale(1.2);
+    color: white;
+}
+
+.infoText {
+    text-align: center;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Tarjetas Misión/Visión */
+.missionCard, .visionCard {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.missionCard {
+    border: 3px solid #4a184d;
+}
+
+.visionCard {
+    border: 3px solid #ffd700;
+}
+
+.missionCard:hover {
+    background: #4a184d;
+    transform: translateY(-10px);
+}
+
+.visionCard:hover {
+    background: #ffd700;
+    transform: translateY(-10px);
+}
+
+.cardContent {
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.missionCard:hover .cardContent {
+    color: white;
+}
+
+.visionCard:hover .cardContent {
+    color: #4a184d;
+}
+
+.cardIcon {
+    font-size: 2.5rem;
+    color: #4a184d;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.missionCard:hover .cardIcon {
+    color: #ffd700;
+    transform: rotate(15deg);
+}
+
+.visionCard:hover .cardIcon {
+    color: #4a184d;
+    transform: rotate(-15deg);
+}
+
+.cardTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.cardText {
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Animaciones */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .descripcionBox {
+        padding: 1.5rem;
+    }
+    
+    .cardTitle {
+        font-size: 1.5rem;
+    }
+    
+    .titleUnderline {
+        width: 150px;
+    }
+}

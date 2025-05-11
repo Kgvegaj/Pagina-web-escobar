@@ -1,0 +1,219 @@
+/* Header */
+.encabezadoPersonalizado {
+    background-color: var(--color-oscuro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transicion-base);
+}
+
+.encabezadoPersonalizado.scrolled {
+    padding: 0.7rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoPersonalizado img,
+.logoDerechaPersonalizado img {
+    max-height: 70px;
+    transition: var(--transicion-base);
+}
+
+.logoPersonalizado:hover img,
+.logoDerechaPersonalizado:hover img {
+    transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbarToggler {
+    background: none;
+    border: 1px solid var(--color-acento);
+    padding: 0.5rem 0.75rem;
+    color: var(--color-texto-claro);
+    display: none;
+    align-items: center;
+    transition: var(--transicion-base);
+}
+
+.navbarToggler:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.navbarTogglerIcon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 215, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5rem;
+}
+
+.navbarCollapse {
+    display: flex;
+    flex-grow: 1;
+}
+
+.navbarNav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+.navLink {
+    color: var(--color-texto-claro);
+    padding: 0.8rem 1.2rem;
+    font-weight: 500;
+    transition: var(--transicion-base);
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-acento);
+    transition: var(--transicion-base);
+}
+
+.navLink:hover,
+.navLink:focus,
+.navLink.active {
+    color: var(--color-acento);
+}
+
+.navLink:hover::after,
+.navLink:focus::after,
+.navLink.active::after {
+    width: 100%;
+}
+
+/* Dropdown */
+.dropdownToggle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.5rem;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    transition: var(--transicion-base);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-oscuro);
+    min-width: 200px;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transicion-base);
+    z-index: 1000;
+}
+
+.dropdownItem {
+    padding: 0;
+}
+
+.dropdownLink {
+    color: var(--color-texto-claro);
+    padding: 0.7rem 1.5rem;
+    display: block;
+    transition: var(--transicion-base);
+    text-decoration: none;
+}
+
+.dropdownLink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-acento);
+    padding-left: 1.8rem;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbarToggler {
+        display: flex;
+    }
+
+    .navbarCollapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-oscuro);
+        padding: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbarCollapse.show {
+        display: flex;
+    }
+
+    .navbarNav {
+        flex-direction: column;
+    }
+
+    .navItem {
+        margin: 0.5rem 0;
+    }
+
+    .navLink {
+        padding: 0.5rem 1rem;
+    }
+
+    .navLink::after {
+        display: none;
+    }
+
+    .dropdownMenu {
+        position: static;
+        box-shadow: none;
+        margin-left: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    .dropdownMenu.show {
+        display: block;
+    }
+
+    .logoDerechaPersonalizado {
+        display: none;
+    }
+}

@@ -1,0 +1,33 @@
+:root {
+    --color-principal: #4a184d;
+    --color-secundario: #7b2cbf;
+    --color-acento: #ffd700;
+    --color-oscuro: #222;
+    --color-claro: #f8f9fa;
+    --color-texto: #333;
+    --color-texto-claro: #eee;
+    --transicion-base: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Animaciones básicas */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rebote-sutil {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}

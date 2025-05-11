@@ -1,0 +1,203 @@
+.serviceSection {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.bgLight {
+    background-color: var(--color-texto-claro);
+}
+
+.serviceTitle {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.serviceTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-acento);
+}
+
+.serviceDescription {
+    margin-bottom: 1.8rem;
+    color: var(--color-texto);
+}
+
+.serviceDescription p {
+    margin-bottom: 1rem;
+}
+
+.serviceList {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.serviceList li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.serviceList li::before {
+    content: '\f00c';
+    font-family: 'bootstrap-icons';
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.subList {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.subList li::before {
+    content: '\f138';
+    color: var(--primary-light);
+}
+
+.serviceImage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-base);
+}
+
+.serviceImage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.serviceImage img {
+    transition: var(--transition-base);
+    opacity: 0;
+}
+
+.serviceImage img.loaded {
+    opacity: 1;
+}
+
+.serviceImage:hover img {
+    transform: scale(1.03);
+}
+
+/* Animaciones */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: var(--transition-slow);
+}
+
+.animate .reveal {
+    opacity: 1;
+}
+
+.serviceSection:nth-child(odd) .serviceContent {
+    animation: fadeInLeft 0.8s ease-out both;
+}
+
+.serviceSection:nth-child(even) .serviceContent {
+    animation: fadeInRight 0.8s ease-out both;
+}
+
+.serviceSection:nth-child(odd) .serviceImage {
+    animation: fadeInRight 0.8s ease-out both;
+}
+
+.serviceSection:nth-child(even) .serviceImage {
+    animation: fadeInLeft 0.8s ease-out both;
+}
+
+/* List items con animación escalonada */
+.serviceList li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: var(--transition-slow);
+}
+
+.animate .serviceList li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate .serviceList li:nth-child(1) {
+    transition-delay: 0.3s;
+}
+
+.animate .serviceList li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.animate .serviceList li:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.animate .serviceList li:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.animate .serviceList li:nth-child(5) {
+    transition-delay: 0.7s;
+}
+
+.animate .serviceList li:nth-child(6) {
+    transition-delay: 0.8s;
+}
+
+.animate .serviceList li:nth-child(7) {
+    transition-delay: 0.9s;
+}
+
+@media (max-width: 992px) {
+    .serviceSection {
+        padding: 3rem 0;
+    }
+
+    .serviceTitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceContent {
+        margin-top: 2rem;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

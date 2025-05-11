@@ -1,0 +1,38 @@
+/* Estilos principales del contenedor */
+.contactosContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 2rem; /* Espacio entre columnas */
+    padding: 2rem;
+    min-height: 80vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Columna del formulario */
+.formColumn {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Columna del mapa */
+.mapColumn {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contactosContainer {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        padding: 1rem;
+    }
+    
+    .mapColumn {
+        height: 400px; /* Altura fija para móviles */
+    }
+}

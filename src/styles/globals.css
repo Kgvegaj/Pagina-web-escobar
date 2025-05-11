@@ -1,0 +1,28 @@
+body.cuerpo-personalizado {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-claro);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-principal);
+    text-decoration: none;
+    transition: var(--transicion-base);
+}
+
+a:hover {
+    color: var(--color-secundario);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-principal);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
