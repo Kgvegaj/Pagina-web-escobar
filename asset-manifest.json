@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Kgvegaj/Pagina-web-escobar.git/static/css/main.e90a1f78.css",
+    "main.js": "/Kgvegaj/Pagina-web-escobar.git/static/js/main.7386e4fe.js",
+    "static/media/fondo-auditoria.jpg": "/Kgvegaj/Pagina-web-escobar.git/static/media/fondo-auditoria.eeb9a6e17cdc1a21451f.jpg",
+    "static/media/bootstrap-icons.woff?": "/Kgvegaj/Pagina-web-escobar.git/static/media/bootstrap-icons.ff25a7ff93ea67f144c5.woff",
+    "static/media/bootstrap-icons.woff2?": "/Kgvegaj/Pagina-web-escobar.git/static/media/bootstrap-icons.ca961065e092080ca3f5.woff2",
+    "index.html": "/Kgvegaj/Pagina-web-escobar.git/index.html",
+    "main.e90a1f78.css.map": "/Kgvegaj/Pagina-web-escobar.git/static/css/main.e90a1f78.css.map",
+    "main.7386e4fe.js.map": "/Kgvegaj/Pagina-web-escobar.git/static/js/main.7386e4fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e90a1f78.css",
+    "static/js/main.7386e4fe.js"
+  ]
+}
